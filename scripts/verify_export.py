@@ -83,11 +83,13 @@ def verify_export():
             csv_lines.append(",".join(escape_csv(v) for v in row))
 
         csv_content = "\r\n".join(csv_lines)
-        with open(csv_path, "w", encoding="utf-8") as f:
+        # Keep explicit RFC-4180 CRLF bytes; otherwise Windows text-mode
+        # newline translation turns each record separator into a blank row.
+        with open(csv_path, "w", encoding="utf-8", newline="") as f:
             f.write(csv_content)
 
         # Parse CSV back using Python's csv module to verify roundtrip integrity
-        with open(csv_path, "r", encoding="utf-8") as f:
+        with open(csv_path, "r", encoding="utf-8", newline="") as f:
             reader = csv.reader(f)
             parsed_rows = list(reader)
         
