@@ -9,7 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV /tmp/gary-book-burner-laun-w4-j1-attempt-1-3882305119/repo/.venv
+setenv VIRTUAL_ENV /tmp/gary-book-burner-laun-w6-j2-attempt-1-1069512283/repo/.venv
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/"bin":$PATH"
