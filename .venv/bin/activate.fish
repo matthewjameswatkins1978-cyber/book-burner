@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV /tmp/gary-book-burner-laun-w6-j1-attempt-1-3590890433/repo/.venv
+set -gx VIRTUAL_ENV /tmp/gary-book-burner-laun-w7-j1-attempt-1-3724196404/repo/.venv
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH
